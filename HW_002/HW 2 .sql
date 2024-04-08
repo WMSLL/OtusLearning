@@ -4,7 +4,7 @@
 
 Select*
 From Warehouse.StockItems
-where StockItemName like '%urgent%' or  stockItemName like '%Animal%'
+where StockItemName like '%urgent%' or  stockItemName like 'Animal%'
 
 --Поставщиков (Suppliers), у которых не было сделано ни одного заказа (PurchaseOrders).
 
@@ -31,17 +31,17 @@ and IsOrderFinalized=1
 
 --Десять последних продаж (по дате продажи) с именем клиента и именем сотрудника, который оформил заказ (SalespersonPerson). Сделать без подзапросов.
 
-Select top 10  OrderID,pcont.FullName [Client],pSale.FullName [Salesperson]
+Select top 10  OrderID,pcont.[CustomerName] [Client],pSale.FullName [Salesperson]
 
 
 From Sales.Orders o left join [Application].[People] pSale on pSale.PersonID=o.SalespersonPersonID
-                    left join [Application].[People] pcont on pcont.PersonID=o.ContactPersonID
+                    left join [Sales].[Customers] pcont on pcont.CustomerID=o.CustomerID
 order by ExpectedDeliveryDate desc
  
 
  --Все ид и имена клиентов и их контактные телефоны, которые покупали товар "Chocolate frogs 250g".
 
- Select o.OrderID,pcont.PersonID,pcont.FullName,pcont.PhoneNumber
+ Select o.OrderID,pcont.CustomerID,pcont.[CustomerName]  ,pcont.PhoneNumber
  From Sales.Orders o join Sales.OrderLines ol on ol.OrderID=o.OrderID
-                     left join [Application].[People] pcont on pcont.PersonID=o.ContactPersonID
+                      join [Sales].[Customers] pcont on pcont.CustomerID=o.CustomerID
  where Description=N'Chocolate frogs 250g'
