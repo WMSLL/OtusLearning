@@ -3,31 +3,51 @@
 
 
 
---Опционально:
---Написать запросы 2-3 так, чтобы если в каком-то месяце не было продаж,
---то этот месяц также отображался бы в результатах, но там были нули.
+/*
+1. Посчитать среднюю цену товара, общую сумму продажи по месяцам.
+Вывести:
+* Год продажи (например, 2015)
+* Месяц продажи (например, 4)
+* Средняя цена за месяц по всем товарам
+* Общая сумма продаж за месяц
 
---Посчитать среднюю цену товара, общую сумму продажи по месяцам.
+Продажи смотреть в таблице Sales.Invoices и связанных таблицах.
+*/
+Select YEAR(InvoiceDate) [Год продажи],month(InvoiceDate) [Месяц продажи],avg(ol.UnitPrice) avg_Price,sum(Quantity*UnitPrice) sum_sales
+From Sales.Invoices i  join Sales.OrderLines ol on ol.OrderID=i.OrderID
+Group by YEAR(InvoiceDate) ,month(InvoiceDate) 
+Order by YEAR(InvoiceDate) ,month(InvoiceDate) 
 
-Select  ol.StockItemID,avg(UnitPrice) AVG_UnitPrice,sum(UnitPrice*Quantity) sum_sale,format(o.OrderDate,'MMMM','rU-rU') [Месяц]
-From Sales.OrderLines ol join Sales.Orders o on o.OrderID=ol.OrderID
-Group by ol.StockItemID,format(o.OrderDate,'MMMM','rU-rU'), month(o.OrderDate)
-order by month(o.OrderDate),ol.StockItemID
---Отобразить все месяцы, где общая сумма продаж превысила 4 600 000.
+/*
+2. Отобразить все месяцы, где общая сумма продаж превысила 4 600 000
 
-if OBJECT_ID('tempdb..#Month')!=0 drop table #Month
+Вывести:
+* Год продажи (например, 2015)
+* Месяц продажи (например, 4)
+* Общая сумма продаж
 
-SELECT Value  [Месяц]
-into #Month
-FROM STRING_SPLIT(N'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь',',')
+Продажи смотреть в таблице Sales.Invoices и связанных таблицах.
+*/
 
-Select m.Месяц,isnull([Сумма Продаж],0)[Сумма Продаж]
-From #Month m left join (Select format(o.OrderDate,'MMMM','rU-rU') [Месяц], sum(ol.Quantity*UnitPrice)[Сумма Продаж]
-                                From Sales.Orders o   join Sales.OrderLines ol on ol.OrderID=o.OrderID
-                                Group by  format(o.OrderDate,'MMMM','rU-rU'),month(o.OrderDate)
-                                having sum(ol.Quantity*UnitPrice)>4600000
+Select YEAR(InvoiceDate) [Год продажи],month(InvoiceDate) [Месяц продажи],sum(Quantity*UnitPrice) sum_sales
+From Sales.Invoices i  join Sales.OrderLines ol on ol.OrderID=i.OrderID
+Group by YEAR(InvoiceDate) ,month(InvoiceDate) 
+having sum(Quantity*UnitPrice)>4600000
+Order by YEAR(InvoiceDate) ,month(InvoiceDate) 
+
+--if OBJECT_ID('tempdb..#Month')!=0 drop table #Month
+
+--SELECT Value  [Месяц]
+--into #Month
+--FROM STRING_SPLIT(N'Январь,Февраль,Март,Апрель,Май,Июнь,Июль,Август,Сентябрь,Октябрь,Ноябрь,Декабрь',',')
+
+--Select m.Месяц,isnull([Сумма Продаж],0)[Сумма Продаж]
+--From #Month m left join (Select format(o.OrderDate,'MMMM','rU-rU') [Месяц], sum(ol.Quantity*UnitPrice)[Сумма Продаж]
+--                                From Sales.Orders o   join Sales.OrderLines ol on ol.OrderID=o.OrderID
+--                                Group by  format(o.OrderDate,'MMMM','rU-rU'),month(o.OrderDate)
+--                                having sum(ol.Quantity*UnitPrice)>4600000
                                 
-                         ) SaleSum on SaleSum.Месяц=m.Месяц
+--                         ) SaleSum on SaleSum.Месяц=m.Месяц
 
 
 
