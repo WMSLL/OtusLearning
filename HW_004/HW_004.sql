@@ -142,13 +142,15 @@ FROM Sales.Invoices  i
 ORDER BY TotalSumm DESC
 
 -- --
+-- читабельней
 
-;with ttt as (
+
+;with invLine as (
 SELECT InvoiceId, SUM(Quantity*UnitPrice) AS TotalSumm
 	FROM Sales.InvoiceLines
 	GROUP BY InvoiceId
 	HAVING SUM(Quantity*UnitPrice) > 27000)
-, tt2 as (SELECT SUM(OrderLines.PickedQuantity*OrderLines.UnitPrice)TotalSummForPickedItems,OrderId
+, Oline as (SELECT SUM(OrderLines.PickedQuantity*OrderLines.UnitPrice)TotalSummForPickedItems,OrderId
 		FROM Sales.OrderLines 
 		Group by OrderId)
 
@@ -158,8 +160,8 @@ Select i.InvoiceID,
 	SalesTotals.TotalSumm AS TotalSummByInvoice,
 	TotalSummForPickedItems
 FROM Sales.Invoices i join Application.People p on p.PersonID = i.SalespersonPersonID
-                      JOIN ttt AS SalesTotals ON i.InvoiceID = SalesTotals.InvoiceID
+                      JOIN invLine AS SalesTotals ON i.InvoiceID = SalesTotals.InvoiceID
 		
-		join tt2 as	o on  o.OrderId =i.OrderID
+		join Oline as	o on  o.OrderId =i.OrderID
 ORDER BY TotalSumm DESC
 	
