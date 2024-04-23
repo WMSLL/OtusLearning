@@ -38,40 +38,44 @@ USE WideWorldImporters
 Нарастающий итог должен быть без оконной функции.
 */
 -- set statistics time, io OFF
+set statistics time, io on
 if object_id('tempdb..#SumSum')!=0 drop table #SumSum
 
-Select sum(summ) summ ,Year_InvoiceDate,MONTH_InvoiceDate,InvoiceDate,InvoiceID
+Select sum(summ) summ ,Year_InvoiceDate,MONTH_InvoiceDate,InvoiceDate,InvoiceLineID
 into #SumSum
 From 
-                     (Select sum(UnitPrice*Quantity) summ ,YEAR(i2.InvoiceDate) Year_InvoiceDate,MONTH(i2.InvoiceDate) MONTH_InvoiceDate ,InvoiceDate,i2.InvoiceID
+                     (Select sum(UnitPrice*Quantity) summ ,YEAR(i2.InvoiceDate) Year_InvoiceDate,MONTH(i2.InvoiceDate) MONTH_InvoiceDate ,InvoiceDate,il2.InvoiceLineID
 					          From Sales.Invoices i2 join  Sales.InvoiceLines il2 on il2.InvoiceID=i2.InvoiceID 
-                                   Group by YEAR(i2.InvoiceDate) ,MONTH(i2.InvoiceDate),InvoiceDate,i2.InvoiceID )s
-								   Group by  Year_InvoiceDate,MONTH_InvoiceDate,InvoiceDate,InvoiceID
+                                   Group by YEAR(i2.InvoiceDate) ,MONTH(i2.InvoiceDate),InvoiceDate,il2.InvoiceLineID )s
+								   Group by  Year_InvoiceDate,MONTH_InvoiceDate,InvoiceDate,InvoiceLineID
 
 Select i.InvoiceID [id продажи],c.CustomerName [название клиента],InvoiceDate [дата продажи],
 
 (Select sum(summ) From #SumSum s where s.MONTH_InvoiceDate=MONTH(i.InvoiceDate) and YEAR(i.InvoiceDate)=Year_InvoiceDate  ) [сумму продажи]
  ,
 
-(Select sum(summ) From #SumSum s where MONTH(i.InvoiceDate)=s.MONTH_InvoiceDate and Year_InvoiceDate=YEAR(i.InvoiceDate)  and s.InvoiceID<=i.InvoiceID   )  [сумму нарастающим итогом]
+(Select sum(summ) From #SumSum s where MONTH(i.InvoiceDate)=s.MONTH_InvoiceDate and Year_InvoiceDate=YEAR(i.InvoiceDate)  and s.InvoiceLineID<=il.InvoiceLineID   )  [сумму нарастающим итогом]
 
-From Sales.Invoices i join Sales.Customers c on c.CustomerID=i.CustomerID
+From Sales.Invoices i join Sales.InvoiceLines il on il.InvoiceID=i.InvoiceID
+join Sales.Customers c on c.CustomerID=i.CustomerID
 where i.InvoiceDate>='2015-01-01' 
-order by i.InvoiceID,InvoiceDate
+
+order by InvoiceDate,i.InvoiceID
 
 
 /*
 2. Сделайте расчет суммы нарастающим итогом в предыдущем запросе с помощью оконной функции.
    Сравните производительность запросов 1 и 2 с помощью set statistics time, io on
 */
-
-Select i.OrderID [id продажи],c.CustomerName [название клиента],InvoiceDate [дата продажи],
+--39071
+Select i.InvoiceID [id продажи],c.CustomerName [название клиента],InvoiceDate [дата продажи],
 sum(UnitPrice*Quantity) over(partition by YEAR(InvoiceDate),MONTH(InvoiceDate) ) [сумму продажи],
-sum(UnitPrice*Quantity) over (partition by YEAR(InvoiceDate),MONTH(InvoiceDate)  order by InvoiceDate,UnitPrice*Quantity  rows between unbounded preceding and current row ) [сумму нарастающим итогом]
+sum(UnitPrice*Quantity) over (partition by YEAR(InvoiceDate),MONTH(InvoiceDate)  order by InvoiceDate,i.InvoiceID  rows between unbounded preceding and current row ) [сумму нарастающим итогом]
 From Sales.Invoices i join Sales.InvoiceLines il on il.InvoiceID=i.InvoiceID
                       join Sales.Customers c on c.CustomerID=i.CustomerID
 where i.InvoiceDate>='2015-01-01' 
-order by InvoiceDate, UnitPrice*Quantity
+order by InvoiceDate,i.InvoiceID
+set statistics time, io  off
 
 /*
 3. Вывести список 2х самых популярных продуктов (по количеству проданных) 
