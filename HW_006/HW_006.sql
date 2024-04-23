@@ -52,7 +52,7 @@ Select convert(nvarchar,InvoiceDate,104) InvoiceMonth ,
 [(Gasport, NY)],
 [(Jessie, ND)]
 From (
-Select   Replace(c.CustomerName,N'Tailspin Toys','')CustomerName,i.InvoiceID,i.InvoiceDate
+Select  rtrim(ltrim(REPLACE(c.CustomerName,'Tailspin Toys',''))) CustomerName,i.InvoiceID,i.InvoiceDate
 From Sales.Invoices i join Sales.Customers c on c.CustomerID=i.CustomerID  and i.CustomerID between 2 and 6) customs
 pivot
 (count(InvoiceID)
