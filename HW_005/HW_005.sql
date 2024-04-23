@@ -85,11 +85,11 @@ set statistics time, io  off
 
 SELECT StockItemID,Description,InvoiceDate,qty
 FROM (
-SELECT StockItemID,il.Description, SUM(Quantity) qty, month(InvoiceDate) InvoiceDate, 
-       ROW_NUMBER() OVER (partition by month(InvoiceDate) ORDER BY SUM(Quantity) DESC) rowNum
+SELECT StockItemID,il.Description, SUM(Quantity) qty, datename(MONTH,InvoiceDate) InvoiceDate, 
+       ROW_NUMBER() OVER (partition by datename(MONTH,InvoiceDate) ORDER BY SUM(Quantity) DESC) rowNum
 FROM Sales.Invoices i join Sales.InvoiceLines il on il.InvoiceID=i.InvoiceID
 WHERE i.InvoiceDate>='2016-01-01' and i.InvoiceDate<'2017-01-01'
-GROUP BY StockItemID,il.Description,month(InvoiceDate)
+GROUP BY StockItemID,il.Description,datename(MONTH,InvoiceDate) 
 )  s
 WHERE s.rowNum <=2
 order by InvoiceDate,qty desc,StockItemID
