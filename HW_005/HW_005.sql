@@ -135,7 +135,7 @@ From Sales.Invoices i join Sales.Customers c on c.CustomerID=i.CustomerID
 
 Select*
 From employees e 
-where row_num in (Select max(row_num)
+where row_num in (Select min(row_num)
 From employees ee 
 where e.SalespersonPersonID=ee.SalespersonPersonID
 Group by SalespersonPersonID)
