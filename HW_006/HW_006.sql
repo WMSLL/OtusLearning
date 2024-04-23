@@ -45,7 +45,7 @@ InvoiceMonth | Peeples Valley, AZ | Medicine Lodge, KS | Gasport, NY | Sylvanite
 --[Tailspin Toys (Gasport, NY)],
 --[Tailspin Toys (Jessie, ND)]
 
-Select InvoiceDate,
+Select convert(nvarchar,InvoiceDate,104) InvoiceMonth ,
 [Tailspin Toys (Sylvanite, MT)],
 [Tailspin Toys (Peeples Valley, AZ)],
 [Tailspin Toys (Medicine Lodge, KS)],
@@ -108,12 +108,24 @@ CountryId | CountryName | Code
 ----------+-------------+-------
 */
 
-Select CountryID,CountryName, Code.Code
-from Application.Countries c cross apply (Select IsoAlpha3Code Code From Application.Countries c1 where c1.CountryID=c.CountryID 
- union all 
- Select cast(IsoNumericCode as nvarchar) From Application.Countries c1 where c1.CountryID=c.CountryID) Code
- order by CountryID,Code.Code
-                              
+--Select CountryID,CountryName, Code.Code
+--from Application.Countries c cross apply (Select IsoAlpha3Code Code From Application.Countries c1 where c1.CountryID=c.CountryID 
+-- union all 
+-- Select cast(IsoNumericCode as nvarchar) From Application.Countries c1 where c1.CountryID=c.CountryID) Code
+-- order by CountryID,Code.Code
+
+
+
+Select CountryID,CountryName,code 
+From (
+Select CountryID,CountryName,IsoAlpha3Code,cast(IsoNumericCode as nvarchar(3))IsoNumericCode 
+From Application.Countries
+) coun
+unpivot
+(
+code for tt in (IsoAlpha3Code,IsoNumericCode)
+) yy
+order by CountryID                        
 
 /*
 4. Выберите по каждому клиенту два самых дорогих товара, которые он покупал.
@@ -122,7 +134,10 @@ from Application.Countries c cross apply (Select IsoAlpha3Code Code From Applica
 
 Select c.CustomerID,c.CustomerName,o2.StockItemID,o2.UnitPrice,o2.InvoiceDate
 From Sales.Customers c cross apply (
-Select top 2 StockItemID,UnitPrice,InvoiceDate
+Select distinct   StockItemID, UnitPrice ,InvoiceDate   ,DENSE_RANK() OVER       (PARTITION BY CustomerID ORDER BY UnitPrice DESC,StockItemID) AS Rank2 
 From Sales.Invoices o join Sales.InvoiceLines ol on ol.InvoiceID=o.OrderID 
-where o.CustomerID=c.CustomerID
-order by ol.UnitPrice) o2
+where o.CustomerID=c.CustomerID 
+) o2
+where Rank2<=2
+order by c.CustomerID,Rank2
+
