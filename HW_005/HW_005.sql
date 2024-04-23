@@ -113,15 +113,15 @@ order by InvoiceDate,qty desc,StockItemID
 */
 
 Select i.StockItemID [ид товара],i.StockItemName [название], N'Не пойму откуда взять' as [брэнд], i.UnitPrice [цена],
-ROW_NUMBER () over (Partition by left(i.StockItemName,1) order by StockItemID), -- [* пронумеруйте записи по названию товара, так чтобы при изменении буквы алфавита нумерация начиналась заново]
-count(*)  over (Partition by 1), --[* посчитайте общее количество товаров и выведете полем в этом же запросе]
-count(*)  over (Partition by left(i.StockItemName,1)), --[* посчитайте общее количество товаров в зависимости от первой буквы названия товара]
-lead(StockItemID) over (Order by StockItemName) , --[* отобразите следующий id товара исходя из того, что порядок отображения товаров по имени ]
-lag(StockItemID) over (Order by StockItemName),  --[* предыдущий ид товара с тем же порядком отображения (по имени)]
-isnull(lag(StockItemName,2) over (Order by StockItemID),N'No items'),  --[* предыдущий ид товара с тем же порядком отображения (по имени)]
-ntile(30) over (partition by TypicalWeightPerUnit order by StockItemID) --[* сформируйте 30 групп товаров по полю вес товара на 1 шт]
+ROW_NUMBER () over (Partition by left(i.StockItemName,1) order by StockItemID) as [Номер записи по названию товара], -- [* пронумеруйте записи по названию товара, так чтобы при изменении буквы алфавита нумерация начиналась заново]
+count(*)  over (Partition by 1) [общее количество товаров], --[* посчитайте общее количество товаров и выведете полем в этом же запросе]
+count(*)  over (Partition by left(i.StockItemName,1)) as [общее количество товаров по первой букве], --[* посчитайте общее количество товаров в зависимости от первой буквы названия товара]
+lead(StockItemID) over (Order by StockItemID) [отобразиnm следующий id товара] , --[* отобразите следующий id товара исходя из того, что порядок отображения товаров по имени ]
+lag(StockItemID) over (Order by StockItemID) [отобразиnm предыдущий id товара],  --[* предыдущий ид товара с тем же порядком отображения (по имени)]
+isnull(lag(StockItemName,2) over (Order by StockItemID),N'No items') [названия товара 2 строки наза "No items"],  --[* названия товара 2 строки назад, в случае если предыдущей строки нет нужно вывести "No items"]
+ntile(30) over (partition by TypicalWeightPerUnit order by StockItemID) [30 групп товаров]--[* сформируйте 30 групп товаров по полю вес товара на 1 шт]
 From Warehouse.StockItems i
-order by ntile(30) over (partition by TypicalWeightPerUnit order by StockItemID)
+order by left(i.StockItemName,1),[Номер записи по названию товара],[отобразиnm следующий id товара]
 
 /*
 5. По каждому сотруднику выведите последнего клиента, которому сотрудник что-то продал.
@@ -129,7 +129,7 @@ order by ntile(30) over (partition by TypicalWeightPerUnit order by StockItemID)
 */
 ; with employees as (
 Select i.SalespersonPersonID,p.FullName,c.CustomerID,CustomerName,
-ROW_NUMBER() OVER (partition by SalespersonPersonID  ORDER BY InvoiceDate DESC) row_num
+ROW_NUMBER() OVER (partition by SalespersonPersonID  ORDER BY InvoiceDate DESC) row_num,InvoiceDate
 From Sales.Invoices i join Sales.Customers c on c.CustomerID=i.CustomerID
                       join  Application.People p on p.PersonID=i.SalespersonPersonID)
 
