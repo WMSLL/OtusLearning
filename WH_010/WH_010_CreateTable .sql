@@ -85,7 +85,7 @@ CREATE TABLE [UserProfile] (
 )
 GO
 
-CREATE TABLE [SecuretyGoup] (
+CREATE TABLE [SecurityGroup] (
   [GroupId] int PRIMARY KEY,
   [Description] nvarchar(25)
 )
@@ -136,5 +136,5 @@ GO
 ALTER TABLE [ShipmentHeader] ADD FOREIGN KEY ([ManagerId]) REFERENCES [UserProfile] ([UserId])
 GO
 
-ALTER TABLE [UserProfile] ADD FOREIGN KEY ([GroupId]) REFERENCES [SecuretyGoup] ([GroupId])
+ALTER TABLE [UserProfile] ADD FOREIGN KEY ([GroupId]) REFERENCES [SecurityGroup] ([GroupId])
 GO
