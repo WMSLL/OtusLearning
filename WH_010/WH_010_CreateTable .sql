@@ -22,7 +22,8 @@ CREATE TABLE [ShippingContainer] (
   [InternalShipmentLineNum] int,
   [InternalShipmentNum] int,
   [ItemId] int,
-  [Quantity] numeric(19,5)
+  [Quantity] numeric(19,5),
+  [Location] nvarchar(25)
 )
 GO
 
@@ -48,7 +49,8 @@ CREATE TABLE [ReceiptContainer] (
   [InternalReceiptLineNum] int,
   [InternaltReceiptNum] int,
   [ItemId] int,
-  [Quantity] numeric(19,5)
+  [Quantity] numeric(19,5),
+  [TO_Location] nvarchar(25)
 )
 GO
 
