@@ -7,6 +7,7 @@
 товаров, имеющихся на складе. Клиент может оформить заказ на несколько товаров.
 Формированием заказа занимается один сотрудник.
 */
+
 Create DataBase ProjectShop
 
 Go
@@ -20,7 +21,9 @@ Go
  Create schema [Sales]
  go
  Create Schema [Application]
+
  Go
+
 
  -- создаем  Таблицу заголовков заказов
 CREATE TABLE ProjectShop.Sales.[ShipmentHeader] (
@@ -95,8 +98,8 @@ CREATE TABLE ProjectShop.[Warehouse].[LocationInventory] (
 GO
 -- создаем  Таблицу  товара
 CREATE TABLE ProjectShop.[Warehouse].[Items] (
-  [id] int identity,
-  [item] nvarchar(25) PRIMARY KEY ,
+  [id] int identity  PRIMARY KEY,
+  [item] nvarchar(25) UNIQUE  ,
   [Description] nvarchar(50)
 )
 GO
@@ -188,3 +191,5 @@ GO
 
 ALTER TABLE ProjectShop.[Application].[UserProfile] ADD FOREIGN KEY ([GroupId]) REFERENCES [Application].[SecurityGroup] ([GroupId])
 GO
+
+
