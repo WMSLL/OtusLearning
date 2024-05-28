@@ -85,8 +85,8 @@ CREATE TABLE ProjectShop.Purchase.[ReceiptContainer] (
 GO
 -- создаем  Таблицу Ячеек 
 CREATE TABLE ProjectShop.[Warehouse].[Location] (
-  [ObjectId] int identity ,
-  [Location] nvarchar(25) PRIMARY KEY
+  [ObjectId] int identity PRIMARY KEY,
+  [Location] nvarchar(25) unique
 )
 GO
 -- создаем  Таблицу Ячеек хранения товара
