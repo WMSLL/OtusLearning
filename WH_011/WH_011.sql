@@ -31,14 +31,14 @@ CREATE TABLE ProjectShop.Sales.[ShipmentHeader] (
   [CustomerId] int  not null,
   [DateTimeCreate] datetime   not null,
   [OrderState] numeric(3)  not null,
-  [UserName] nvarchar(25) 
+  [UserId] int
 )
 GO
 -- создаем  Таблицу Деталей заказов
 CREATE TABLE ProjectShop.Sales.[ShipmentDetail] (
   [InternalShipmentLineNum] int identity PRIMARY KEY,
   [InternalShipmentNum] int not null,
-  [item] nvarchar(25) not null,
+  [ItemId] int not null,
   [TotalQty] numeric(19,5) ,
   [QuantityOriginal] numeric(19,5) ,
   [Price] numeric(19,5) 
@@ -49,7 +49,9 @@ CREATE TABLE ProjectShop.Sales.[ShippingContainer] (
   [InternalContainerNum] int identity PRIMARY KEY,
   [InternalShipmentLineNum] int not null,
   [InternalShipmentNum] int not null,
-  [item] nvarchar(25) not null,
+  container_id nvarchar(25),
+  parent int ,
+  [ItemId] int not null,
   [Quantity] numeric(19,5),
   [Location] nvarchar(25) not null
 )
@@ -68,7 +70,7 @@ GO
 CREATE TABLE ProjectShop.Purchase.[ReceiptDetail] (
   [InternalReceiptLineNum] int identity PRIMARY KEY,
   [InternaltReceiptNum] int not null,
-  [item] nvarchar(25) not null,
+  [ItemId] int not null,
   [totalQty] numeric(19,5),
   [OpentQty] numeric(19,5)
 )
@@ -78,9 +80,9 @@ CREATE TABLE ProjectShop.Purchase.[ReceiptContainer] (
   [InternalReceiptContainer] int identity PRIMARY KEY,
   [InternalReceiptLineNum] int not null,
   [InternaltReceiptNum] int not null,
-  [item] nvarchar(25) not null,
+  [ItemId] int not null,
   [Quantity] numeric(19,5),
-  [TO_Location] nvarchar(25)
+  [TO_LocationID] int
 )
 GO
 -- создаем  Таблицу Ячеек 
@@ -92,13 +94,13 @@ GO
 -- создаем  Таблицу Ячеек хранения товара
 CREATE TABLE ProjectShop.[Warehouse].[LocationInventory] (
   [internalInvNum] int identity PRIMARY KEY,
-  [Location] nvarchar(25) not null,
-  [item] nvarchar(25) not null,
+  [LocationID] int not null,
+  [ItemId] int,
 )
 GO
 -- создаем  Таблицу  товара
 CREATE TABLE ProjectShop.[Warehouse].[Items] (
-  [id] int identity  PRIMARY KEY,
+  [ItemId] int identity  PRIMARY KEY,
   [item] nvarchar(25) UNIQUE  ,
   [Description] nvarchar(50)
 )
@@ -107,7 +109,7 @@ GO
 
 -- создаем  Таблицу  поставщиков товара
 CREATE TABLE ProjectShop.Purchase.SupplierCategories (
-  [ObjectId] int PRIMARY KEY,
+  [ObjectId] int identity PRIMARY KEY,
   [FullName] nvarchar(50) not null,
   Category nvarchar(25)
 )
@@ -115,22 +117,22 @@ GO
 
 -- создаем  Таблицу  заказчиков
 CREATE TABLE ProjectShop.Sales.Customers (
-  [ObjectId] int PRIMARY KEY,
+  [ObjectId] int identity PRIMARY KEY,
   [FullName] nvarchar(50) not null,
   Category nvarchar(25)
 )
 GO
 -- Создаем таблицу пользователей(Сотрудников)
 CREATE TABLE ProjectShop.[Application].[UserProfile] (
-  [ObjectId] int ,
-  [UserName] nvarchar(25) PRIMARY KEY, 
+  [ObjectId] int identity PRIMARY KEY,
+  [UserName] nvarchar(25) unique, 
   [Description] nvarchar(100),
   [GroupId] int
 )
 GO
 -- Создаем таблицу Групп безобасности сотруждников
 CREATE TABLE ProjectShop.[Application].[SecurityGroup] (
-  [GroupId] int PRIMARY KEY,
+  [GroupId] int identity PRIMARY KEY,
   [Description] nvarchar(25)
 )
 GO
@@ -153,16 +155,22 @@ GO
 ALTER TABLE [Sales].[ShippingContainer] ADD FOREIGN KEY ([InternalShipmentLineNum]) REFERENCES [Sales].[ShipmentDetail] ([InternalShipmentLineNum])
 GO
 
-ALTER TABLE [Sales].[ShipmentDetail] ADD FOREIGN KEY ([item]) REFERENCES [Warehouse].[Items] ([item])
+ALTER TABLE [Sales].[ShipmentDetail] ADD FOREIGN KEY ([ItemId] ) REFERENCES [Warehouse].[Items] ([ItemId])
 GO
 
-ALTER TABLE [Sales].[ShippingContainer] ADD FOREIGN KEY ([item]) REFERENCES [Warehouse].[Items] ([item])
+ALTER TABLE [Sales].[ShippingContainer] ADD FOREIGN KEY ([ItemId]) REFERENCES [Warehouse].[Items] ([ItemId])
+
+GO
+ALTER TABLE [Sales].[ShippingContainer] ADD FOREIGN KEY (parent) REFERENCES [Sales].[ShippingContainer] ([InternalContainerNum])
+
+go
+
+
+
+ALTER TABLE Purchase.[ReceiptDetail] ADD FOREIGN KEY ([ItemId]) REFERENCES [Warehouse].[Items] ([ItemId])
 GO
 
-ALTER TABLE Purchase.[ReceiptDetail] ADD FOREIGN KEY ([item]) REFERENCES [Warehouse].[Items] ([item])
-GO
-
-ALTER TABLE Purchase.[ReceiptContainer] ADD FOREIGN KEY ([item]) REFERENCES [Warehouse].[Items] ([item])
+ALTER TABLE Purchase.[ReceiptContainer] ADD FOREIGN KEY ([ItemId]) REFERENCES [Warehouse].[Items] ([ItemId])
 GO
 
 ALTER TABLE Purchase.[ReceiptDetail] ADD FOREIGN KEY ([InternaltReceiptNum]) REFERENCES Purchase.[ReceiptHeader] ([InternaltReceiptNum])
@@ -172,12 +180,15 @@ ALTER TABLE Purchase.[ReceiptContainer] ADD FOREIGN KEY ([InternaltReceiptNum]) 
 GO
 
 ALTER TABLE Purchase.[ReceiptContainer] ADD FOREIGN KEY ([InternalReceiptLineNum]) REFERENCES Purchase.[ReceiptDetail] ([InternalReceiptLineNum])
+
+GO
+ALTER TABLE Purchase.[ReceiptContainer] ADD FOREIGN KEY ([TO_LocationID]) REFERENCES [Warehouse].[Location] ([ObjectId])
+
+go
+ALTER TABLE [Warehouse].[LocationInventory] ADD FOREIGN KEY ([ItemId]) REFERENCES [Warehouse].[Items] ([ItemId])
 GO
 
-ALTER TABLE [Warehouse].[LocationInventory] ADD FOREIGN KEY ([item]) REFERENCES [Warehouse].[Items] ([item])
-GO
-
-ALTER TABLE [Warehouse].[LocationInventory] ADD FOREIGN KEY ([Location]) REFERENCES [Warehouse].[Location] ([Location])
+ALTER TABLE [Warehouse].[LocationInventory] ADD FOREIGN KEY ([LocationID]) REFERENCES [Warehouse].[Location] ([ObjectId])
 GO
 
 ALTER TABLE Sales.[ShipmentHeader] ADD FOREIGN KEY ([CustomerId]) REFERENCES [Sales].Customers ([ObjectId])
@@ -186,7 +197,7 @@ GO
 ALTER TABLE Purchase.[ReceiptHeader] ADD FOREIGN KEY ([SourceId]) REFERENCES Purchase.SupplierCategories ([ObjectId])
 GO
 
-ALTER TABLE [Sales].[ShipmentHeader] ADD FOREIGN KEY ([UserName]) REFERENCES [Application].[UserProfile] ([UserName])
+ALTER TABLE [Sales].[ShipmentHeader] ADD FOREIGN KEY ([UserId]) REFERENCES [Application].[UserProfile] ([ObjectId])
 GO
 
 ALTER TABLE ProjectShop.[Application].[UserProfile] ADD FOREIGN KEY ([GroupId]) REFERENCES [Application].[SecurityGroup] ([GroupId])
