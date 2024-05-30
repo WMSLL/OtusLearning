@@ -95,7 +95,7 @@ GO
 CREATE TABLE ProjectShop.[Warehouse].[LocationInventory] (
   [internalInvNum] int identity PRIMARY KEY,
   [LocationID] int not null,
-  [ItemId] int,
+  [ItemId] int not null,
 )
 GO
 -- создаем  Таблицу  товара
@@ -130,12 +130,7 @@ CREATE TABLE ProjectShop.[Application].[UserProfile] (
   [GroupId] int
 )
 GO
--- Создаем таблицу Групп безобасности сотруждников
-CREATE TABLE ProjectShop.[Application].[SecurityGroup] (
-  [GroupId] int identity PRIMARY KEY,
-  [Description] nvarchar(25)
-)
-GO
+
  -- создание индексов
 Create Index [SC_Internal_shipmentNum] on Sales.[ShippingContainer] ([InternalShipmentNum],[InternalShipmentLineNum])
 
@@ -200,7 +195,6 @@ GO
 ALTER TABLE [Sales].[ShipmentHeader] ADD FOREIGN KEY ([UserId]) REFERENCES [Application].[UserProfile] ([ObjectId])
 GO
 
-ALTER TABLE ProjectShop.[Application].[UserProfile] ADD FOREIGN KEY ([GroupId]) REFERENCES [Application].[SecurityGroup] ([GroupId])
-GO
+
 
 
