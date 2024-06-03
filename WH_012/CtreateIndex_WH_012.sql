@@ -13,9 +13,14 @@ CREATE NONCLUSTERED INDEX [IX_LocationSc_20240602] ON [Sales].[ShippingContainer
 
 -- запрос отображает Какой менеджер сколько сделал заказов на какое количество штук и количество SKU ,в разрезе определенного периода времени.
 -- для данного запроса мождно сделать такой индекс, но так как сейчас табицы с небольшим количество данных от такого инждекса толку мало,
-CREATE NONCLUSTERED INDEX [IX_DateTimeCreate_20240603] ON [Sales].ShipmentHeader
+CREATE NONCLUSTERED INDEX [IX_SHD_DateCreate_20240603] ON [Sales].ShipmentHeader
 (
 	DateTimeCreate ASC
+)
+
+CREATE NONCLUSTERED INDEX [IX_SD_ISN_20240603] ON [Sales].ShipmentDetail
+(
+	InternalShipmentNum ASC
 )
 
 
