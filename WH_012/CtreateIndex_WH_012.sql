@@ -34,7 +34,7 @@ Group by up.Description
 
 
 
--- для данного запроса не вижу какой на данный момент индес было бы хорошо использовать
+-- для данного запроса не вижу какой на данный момент индекс было бы хорошо построить
 Select sc.FullName,sc.Category,rc.Quantity,l.Location
 From Purchase.ReceiptHeader rh join Purchase.ReceiptContainer  rc on  rc.InternaltReceiptNum=rh.InternaltReceiptNum
                                join Purchase.SupplierCategories sc on sc.ObjectId=rh.SourceId
