@@ -31,3 +31,11 @@ From Sales.ShipmentHeader sh join Application.UserProfile up on up.ObjectId=sh.U
 where sh.DateTimeCreate between '2024-06-02' and '2024-06-03'
 
 Group by up.Description
+
+
+
+-- для данного запроса не вижу какой на данный момент индес было бы хорошо использовать
+Select sc.FullName,sc.Category,rc.Quantity,l.Location
+From Purchase.ReceiptHeader rh join Purchase.ReceiptContainer  rc on  rc.InternaltReceiptNum=rh.InternaltReceiptNum
+                               join Purchase.SupplierCategories sc on sc.ObjectId=rh.SourceId
+							   join Warehouse.Location l on l.ObjectId=rc.TO_LocationID
