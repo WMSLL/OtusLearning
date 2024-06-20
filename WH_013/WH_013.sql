@@ -74,10 +74,6 @@ where CustomerID=@ustomerID
 
 Alter Procedure SP_PurchaseAmountForCustomerid @ustomerID int
 as
-
-
-
-
 Select sum(il.UnitPrice) sumPrice
 From Sales.Invoices i join Sales.InvoiceLines il on il.InvoiceID=i.InvoiceID
                      
@@ -104,7 +100,7 @@ return @sum
 
 end
 
--- разница в планах запроса , думаю потому, что функции используются только для вывода данных, т.е оптимизатор не выполняет дополнительных проверок на запрос в отличии хранимых процедур,
+
 
 /*
 4) Создайте табличную функцию покажите как ее можно вызвать для каждой строки result set'а без использования цикла. 
