@@ -28,7 +28,7 @@ Select up.Description,count(distinct sd.InternalShipmentLineNum) [Количес
                      ,sum(cast(sd.TotalQty*Price as int))  [Стоимсоть]
 From Sales.ShipmentHeader sh join Application.UserProfile up on up.ObjectId=sh.UserId
                              join Sales.ShipmentDetail sd on sd.InternalShipmentNum=sh.InternalShipmentNum
-where sh.DateTimeCreate between '2024-06-02' and '2024-06-03'
+where sh.DateTimeCreate between '2024-06-02' and '2024-06-05'
 
 Group by up.Description
 

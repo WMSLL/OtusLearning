@@ -68,7 +68,7 @@ INSERT INTO [Warehouse].[LocationInventory]
 
 begin tran
 
-Declare @CountOrders int=2,@valuesIterationHeader int =0, @OrderState int =100
+Declare @CountOrders int=5,@valuesIterationHeader int =0, @OrderState int =600
 
 while  @valuesIterationHeader<@CountOrders
 
