@@ -84,6 +84,8 @@ Select DBO.FN_PurchaseAmountForCustomerid(1)
 
 exec SP_PurchaseAmountForCustomerid 1
 
+-- Почему план запроса разный, затрудняюсь ответить, но мое предположение , это связано с тем что в ХП может выполнятся запросы DDL и Оптимизатор как бы проверяет все вызовы из ХП, 
+-- на что тратится больше ресурсов , в Функции может выполнятся только Select тем самым не надо тратить дополнительные ресурсы .
 */
 Create Function FN_PurchaseAmountForCustomerid ( @ustomerID int)
 
@@ -122,6 +124,8 @@ SELECT CustomerID, Customertotal.Total
 
 FROM Sales.Customers
 CROSS APPLY Sales.FN_CustomerTotalQty(Customers.CustomerID) AS Customertotal
+
+
 
 
 
