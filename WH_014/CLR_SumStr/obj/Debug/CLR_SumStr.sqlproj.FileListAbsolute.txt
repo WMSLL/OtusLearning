@@ -1,0 +1,10 @@
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\bin\Debug\CLR_SumStr.dacpac
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\bin\Debug\CLR_SumStr.dll
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\bin\Debug\CLR_SumStr.pdb
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\CLR_SumStr.sqlproj.AssemblyReference.cache
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\Model.xml
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\refactor.xml
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\postdeploy.sql
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\predeploy.sql
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\CLR_SumStr.dll
+E:\Otus\Reposetory\OtusLearning\WH_014\CLR_SumStr\obj\Debug\CLR_SumStr.pdb

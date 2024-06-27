@@ -71,7 +71,4 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="CLR_SumStr.publish.xml" />
-  </ItemGroup>
 </Project>
