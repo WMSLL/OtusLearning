@@ -1,8 +1,6 @@
 USE [WideWorldImporters];
 
---Создадим дополнительную колонку для визуального восприятия работы брокера
-ALTER TABLE Sales.Invoices
-ADD InvoiceConfirmedForProcessing DATETIME;
+
 
 --Service Broker включен ли?
 select name, is_broker_enabled
