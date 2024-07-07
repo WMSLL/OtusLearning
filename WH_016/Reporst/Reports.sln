@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Reporst", "Reporst\Reporst.rptproj", "{3FB5C233-BCDA-45FB-8316-AC4ED9811283}"
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Reports", "Reporst\Reports.rptproj", "{3FB5C233-BCDA-45FB-8316-AC4ED9811283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
