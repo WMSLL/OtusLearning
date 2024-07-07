@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Otus\\Reposetory\\OtusLearning\\WH_016\\Reporst\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FB5C233-BCDA-45FB-8316-AC4ED9811283}|Reporst\\Reporst.rptproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_016\\Reporst\\Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{3FB5C233-BCDA-45FB-8316-AC4ED9811283}|Reporst\\Reporst.rptproj|solutionrelative:Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u043E\u0442\u0447\u0435\u04421.rdl [\u041F\u0440\u043E\u0435\u043A\u0442]",
+              "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_016\\Reporst\\Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl",
+              "RelativeDocumentMoniker": "Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl",
+              "ToolTip": "E:\\Otus\\Reposetory\\OtusLearning\\WH_016\\Reporst\\Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl [\u041F\u0440\u043E\u0435\u043A\u0442]",
+              "RelativeToolTip": "Reporst\\\u043E\u0442\u0447\u0435\u04421.rdl [\u041F\u0440\u043E\u0435\u043A\u0442]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-07T09:52:37.874Z",
+              "EditorCaption": " [\u041F\u0440\u043E\u0435\u043A\u0442]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
