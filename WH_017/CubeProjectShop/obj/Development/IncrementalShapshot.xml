@@ -1,0 +1,75 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CubeProjectShop</Database>
+    <Server>HOME-PC\LEARN2SQL2022</Server>
+    <ConnectionString>Data Source=HOME-PC\LEARN2SQL2022;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>sDhXW0ZIZpl7hFSemB67UyC/4PU=30.07.2024 18:44:5530.07.2024 18:44:55</TimeStamp>
+        <ID>
+          <String>ProjectShop</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>u8R751RatID/RTsN5UpFRHe4+28=30.07.2024 18:47:3330.07.2024 18:45:44</TimeStamp>
+        <ID>
+          <String>Project Shop</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ep2K2Y3u6SOTbX83jiXc1V46i/g=30.07.2024 18:48:2330.07.2024 18:48:23</TimeStamp>
+        <ID>
+          <String>Shipment Header</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QYbmeW2+qVtlcHTI+eD/OiNf48Y=30.07.2024 18:48:2330.07.2024 18:48:23</TimeStamp>
+        <ID>
+          <String>Shipment Detail</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>FO5SgKztWhgDz+XbzVmfvakOTYo=30.07.2024 18:48:2330.07.2024 18:48:23</TimeStamp>
+        <ID>
+          <String>Shipping Container</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>dzXKKgbXwG02Dj5zV3AfEZHBHdA=30.07.2024 18:48:2330.07.2024 18:48:23J0kFGDQsdk8Fk3rlREj7QbcbQW0=30.07.2024 18:48:2330.07.2024 18:48:23</TimeStamp>
+        <ID>
+          <String>Project Shop</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Dggo2CbCXe79Xus4+NyPsQGxtTQ=30.07.2024 18:36:4330.07.2024 18:36:43</TimeStamp>
+      <ID>
+        <String>CubeProjectShop</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>false</ProcessingComplete>
+  <LastDeployed>2024-07-30T15:49:52.593333Z</LastDeployed>
+</DeploymentSnapshot>

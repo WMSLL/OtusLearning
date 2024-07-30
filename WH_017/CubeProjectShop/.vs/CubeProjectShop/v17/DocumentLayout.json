@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Project Shop.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Project Shop.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube",
+              "RelativeDocumentMoniker": "Project Shop.cube",
+              "ToolTip": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "Project Shop.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-30T15:48:23.625Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project Shop.dsv [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.dsv",
+              "RelativeDocumentMoniker": "Project Shop.dsv",
+              "ToolTip": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.dsv [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "Project Shop.dsv [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-07-30T15:45:49.007Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
