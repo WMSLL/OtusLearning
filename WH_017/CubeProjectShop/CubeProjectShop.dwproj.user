@@ -3,12 +3,15 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>HOME-PC\LEARN2SQL2022</TargetServer>
         <TargetDatabase>CubeProjectShop</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
         </StartObject>
+        <ProcessingOption>Full</ProcessingOption>
+        <TransactionalDeployment>true</TransactionalDeployment>
+        <DeploymentMode>DeployAll</DeploymentMode>
       </Options>
     </Configuration>
   </Configurations>
