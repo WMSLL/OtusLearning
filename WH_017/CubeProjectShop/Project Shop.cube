@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3569" scrolltop="-5375" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="36010" y="15901" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="9675" scrolltop="-3664" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="36010" y="12039" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -158,11 +158,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-3569</Value>
+      <Value>9675</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-5375</Value>
+      <Value>-3664</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -180,6 +180,16 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
+    <Dimension dwd:design-time-name="87ec6cb4-caf3-44b4-8e14-9e73f508cf91">
+      <ID>Customers</ID>
+      <Name>Customers</Name>
+      <DimensionID>Customers</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cec26346-ce2b-4787-bbaf-ff78a386f9ad">
+          <AttributeID>Object Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
     <Dimension dwd:design-time-name="dadd606c-11ea-4bc5-be84-627ea3462910">
       <ID>Shipment Header</ID>
       <Name>Shipment Header</Name>
@@ -187,6 +197,9 @@
       <Attributes>
         <Attribute dwd:design-time-name="0e7eeb77-2722-4d3f-af5d-e61e05826329">
           <AttributeID>Internal Shipment Num</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85f27306-6040-4269-87ad-09c63333ef6b">
+          <AttributeID>Customer Id</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -218,6 +231,14 @@
           <AttributeID>Internal Shipment Num</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="94a8cfee-7598-4424-a3e0-033e7ecbbeba">
+          <HierarchyID>Иерархия</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="e8a34763-c4cf-433a-a24b-1199de66db18">
+          <HierarchyID>Иерархия 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
     <Dimension dwd:design-time-name="60adc417-f2cb-40fc-a2ae-13fc8ebdafae">
       <ID>Shipment Detail - Internal Shipment Num</ID>
@@ -227,15 +248,8 @@
         <Attribute dwd:design-time-name="896ae96a-69e1-4915-ab5c-6aed68ae1c0b">
           <AttributeID>Internal Shipment Num</AttributeID>
         </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="87ec6cb4-caf3-44b4-8e14-9e73f508cf91">
-      <ID>Customers</ID>
-      <Name>Customers</Name>
-      <DimensionID>Customers</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="cec26346-ce2b-4787-bbaf-ff78a386f9ad">
-          <AttributeID>Object Id</AttributeID>
+        <Attribute dwd:design-time-name="d82dedb5-92ad-43c9-832a-ddca1e467d9e">
+          <AttributeID>Customer Id</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -580,14 +594,23 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="7ebad531-3c02-443c-b1c6-c777032b3381">
-          <ID>Число Object Id</ID>
-          <Name>Число Object Id</Name>
-          <AggregateFunction>Count</AggregateFunction>
-          <DataType>Integer</DataType>
-          <Source dwd:design-time-name="0ee8bf22-f882-4c16-9fce-1b332500444e">
+        <Measure dwd:design-time-name="f407576b-36fa-46b6-8d1b-64c25f6c2ec6">
+          <ID>Object Id</ID>
+          <Name>Object Id</Name>
+          <Source dwd:design-time-name="d198141d-b4f7-45e4-ade5-c73d2201682f">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="27e3f3b7-e83f-4270-a76a-cf5468ac78ae">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f852e273-0d8d-4b1c-a930-625fc1b2082e">
+              <TableID>Sales_Customers</TableID>
+              <ColumnID>ObjectId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ffb8c9e9-dde7-4dd2-aeae-8a26129a89a7">
+          <ID>Object Id - Customers</ID>
+          <Name>Object Id - Customers</Name>
+          <Source dwd:design-time-name="b7dc339a-0dc3-4ffb-a79f-abd8c9025651">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f9516731-ac71-4e58-a124-51cd6a607e92">
               <TableID>Sales_Customers</TableID>
               <ColumnID>ObjectId</ColumnID>
             </Source>

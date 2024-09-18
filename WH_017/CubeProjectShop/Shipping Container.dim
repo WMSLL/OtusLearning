@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3118b8b0-a35f-4761-9656-bfbf89f7e188" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ac2b76ed-d9be-470d-a098-30f972d5bbc9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Shipping Container</ID>
   <Name>Shipping Container</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -6,6 +6,32 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3936" scrolltop="-3810" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12330" y="12039" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShippingContainer" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4419" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004311000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Sales_ShippingContainer" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-3936</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-3810</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -42,35 +68,35 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="84c970e2-53c3-4c90-80e7-8d8d826db508">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="25d4c1fb-7ff4-4533-8d67-620fa0c0e128">
     <DataSourceViewID>Project Shop</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="087753d1-65e2-4f5b-b5b5-efe822e534c4">
+  <ErrorConfiguration dwd:design-time-name="4dfc6267-7921-4edd-a3d8-55966be684b8">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="3a16d9f5-56c9-4b67-8477-020e55335b29">
+    <Attribute dwd:design-time-name="da5457b4-8f2d-4cd3-9bfe-73de4b32101b">
       <ID>Internal Container Num</ID>
       <Name>Internal Container Num</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ed4278d7-b465-462d-b334-dfae41a3fc1c">
+        <KeyColumn dwd:design-time-name="06cc2701-93c3-4a4a-ae32-af39ccb002c0">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5840948a-b2ed-4490-a9ad-f7f743cb4875">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a3555f3-ef8a-4582-a725-8f56380cd120">
             <TableID>Sales_ShippingContainer</TableID>
             <ColumnID>InternalContainerNum</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="f96dbb23-c6f0-4682-b2cc-08b348e504c0">
+        <AttributeRelationship dwd:design-time-name="8e678aaf-4e79-4037-9f41-1765e7825e35">
           <AttributeID>Internal Shipment Line Num</AttributeID>
           <Name>Internal Shipment Line Num</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="121eb5a8-1701-4f4b-b642-5fb960d25be9">
+        <AttributeRelationship dwd:design-time-name="3d194959-70d4-4ae0-85c9-ba2048a55c79">
           <AttributeID>Internal Shipment Num</AttributeID>
           <Name>Internal Shipment Num</Name>
         </AttributeRelationship>
@@ -79,13 +105,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2b4abc10-6b8b-4ab5-a4f4-256f6207f7a5">
+    <Attribute dwd:design-time-name="afadccfb-f88c-4ac4-9b45-8b832a5e66f5">
       <ID>Internal Shipment Line Num</ID>
       <Name>Internal Shipment Line Num</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="abb1b5b9-12bb-4196-9930-addf6fd3eb23">
+        <KeyColumn dwd:design-time-name="69592077-f06c-4a0f-b5ca-51ce17041bba">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a15ee6a6-a0ef-4000-a1a3-0249e023c1fc">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3ea8b1ff-828b-44bb-9700-881d17433c2e">
             <TableID>Sales_ShippingContainer</TableID>
             <ColumnID>InternalShipmentLineNum</ColumnID>
           </Source>
@@ -96,13 +122,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="aa1ff258-ed29-4aa0-8c78-075c1cb90233">
+    <Attribute dwd:design-time-name="64d7b91e-bcfb-4012-85f1-d80a555a307b">
       <ID>Internal Shipment Num</ID>
       <Name>Internal Shipment Num</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ff71e809-1707-41c7-abbf-1880726aed03">
+        <KeyColumn dwd:design-time-name="aa6ec849-ff6a-4b79-a020-ed13c3228784">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f59e743a-f159-44c9-aaf5-b6eba00313fb">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ff97cdd-8932-4205-8298-e49e988f41a1">
             <TableID>Sales_ShippingContainer</TableID>
             <ColumnID>InternalShipmentNum</ColumnID>
           </Source>
@@ -114,5 +140,29 @@
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="fab7e2c7-1ca0-4e79-afd7-99d99efccbf1">
+      <ID>Иерархия</ID>
+      <Name>Иерархия</Name>
+      <Levels>
+        <Level dwd:design-time-name="e7cd71ad-316a-47b9-9dc1-5bdc3c2ff5aa">
+          <ID>Internal Container Num</ID>
+          <Name>Internal Container Num</Name>
+          <SourceAttributeID>Internal Container Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="75702dbf-950b-43c6-a856-56783e27d533">
+      <ID>Иерархия 1</ID>
+      <Name>Иерархия 1</Name>
+      <Levels>
+        <Level dwd:design-time-name="3991b04d-c20a-43d0-92b4-90415a9d7bf6">
+          <ID>Internal Container Num</ID>
+          <Name>Internal Container Num</Name>
+          <SourceAttributeID>Internal Container Num</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>

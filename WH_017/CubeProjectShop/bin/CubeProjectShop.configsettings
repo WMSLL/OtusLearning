@@ -22,6 +22,9 @@
       <Dimension>
         <ID>Shipping Container</ID>
       </Dimension>
+      <Dimension>
+        <ID>Customers</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
@@ -48,6 +51,14 @@
             <Partitions>
               <Partition>
                 <ID>Shipping Container</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Customers</ID>
+            <Partitions>
+              <Partition>
+                <ID>Customers</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

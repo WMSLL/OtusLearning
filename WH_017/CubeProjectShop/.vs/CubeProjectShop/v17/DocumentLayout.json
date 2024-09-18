@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Shipping Container.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Shipping Container.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Customers.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Customers.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|solutionrelative:Project Shop.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AA96BE46-0446-4E43-AA6F-087B6A4FEAAC}|CubeProjectShop.dwproj|E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,19 +42,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Customers.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Customers.dim",
-              "RelativeDocumentMoniker": "Customers.dim",
-              "ToolTip": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Customers.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "Customers.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentIndex": 0,
+              "Title": "Shipping Container.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Shipping Container.dim",
+              "RelativeDocumentMoniker": "Shipping Container.dim",
+              "ToolTip": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Shipping Container.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "RelativeToolTip": "Shipping Container.dim [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-09-18T07:05:32.871Z",
+              "WhenOpened": "2024-09-18T07:21:14.558Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Project Shop.cube [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "E:\\Otus\\Reposetory\\OtusLearning\\WH_017\\CubeProjectShop\\Project Shop.cube",
               "RelativeDocumentMoniker": "Project Shop.cube",
