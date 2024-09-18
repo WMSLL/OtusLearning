@@ -900,7 +900,8 @@
       <ConnectionString>Data Source=HOME-PC\LEARN2SQL2022;Initial Catalog=ProjectShop;Integrated Security=True;Encrypt=False</ConnectionString>
       <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
       <ImpersonationInfo>
-        <ImpersonationMode>Default</ImpersonationMode>
+        <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
+        <Account>HOME-PC\WMS_L</Account>
         <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
       </ImpersonationInfo>
       <ManagedProvider>System.Data.SqlClient</ManagedProvider>
