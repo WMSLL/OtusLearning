@@ -146,8 +146,8 @@
           <Usage>Key</Usage>
           <KeyColumns>
             <KeyColumn>
-              <NullProcessing>UnknownMember</NullProcessing>
               <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
               <Source xsi:type="ColumnBinding">
                 <TableID>Sales_ShipmentDetail</TableID>
                 <ColumnID>InternalShipmentLineNum</ColumnID>
@@ -314,7 +314,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="7" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-16216" scrolltop="-374" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="43630" y="11589" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3569" scrolltop="-5375" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="36010" y="9393" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -325,7 +325,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShipmentDetail" left="20" top="6819" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4419" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShipmentDetail" left="6709" top="-1799" logicalid="7" controlid="1" masterid="0" hint1="0" hint2="0" width="4419" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e000043110000f40d0000" />
                 </control>
@@ -336,7 +336,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShipmentHeader" left="6839" top="7030" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3889" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShipmentHeader" left="14326" top="3432" logicalid="8" controlid="2" masterid="0" hint1="0" hint2="0" width="3889" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000310f00004d0c0000" />
                 </control>
@@ -347,7 +347,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShippingContainer" left="3164" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4419" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ShippingContainer" left="1448" top="3141" logicalid="9" controlid="3" masterid="0" hint1="0" hint2="0" width="4419" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e00004311000043110000" />
                 </control>
@@ -358,7 +358,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4139" top="8205" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9718" top="1473" logicalid="10" controlid="4" masterid="0" hint1="0" hint2="0" width="5302" height="2459" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -371,14 +371,14 @@
                     <property name="VisibleAP" value="0" vartype="3" />
                   </ddsxmlobj>
                 </layoutobject>
-                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="18" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                  <point x="6839" y="8604" />
-                  <point x="5639" y="8604" />
-                  <point x="5639" y="8605" />
-                  <point x="4439" y="8605" />
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="0" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="14620" y="3432" />
+                  <point x="14620" y="3032" />
+                  <point x="10018" y="3032" />
+                  <point x="10018" y="1773" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1830" top="4119" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="2743" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5567" top="1274" logicalid="11" controlid="5" masterid="0" hint1="0" hint2="0" width="2651" height="3826" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -391,14 +391,13 @@
                     <property name="VisibleAP" value="0" vartype="3" />
                   </ddsxmlobj>
                 </layoutobject>
-                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="6" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                  <point x="2229" y="6819" />
-                  <point x="2229" y="5619" />
-                  <point x="4273" y="5619" />
-                  <point x="4273" y="4419" />
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="3" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="7818" y="1773" />
+                  <point x="7818" y="4800" />
+                  <point x="5867" y="4800" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5623" top="4119" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3560" height="3411" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5567" top="6082" logicalid="12" controlid="6" masterid="0" hint1="0" hint2="0" width="9453" height="1218" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -411,11 +410,10 @@
                     <property name="VisibleAP" value="0" vartype="3" />
                   </ddsxmlobj>
                 </layoutobject>
-                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="6" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                  <point x="8783" y="7030" />
-                  <point x="8783" y="5725" />
-                  <point x="5923" y="5725" />
-                  <point x="5923" y="4419" />
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="1" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="14620" y="6581" />
+                  <point x="14620" y="7000" />
+                  <point x="5867" y="7000" />
                 </connector>
               </ddscontrol>
             </dds>
@@ -435,19 +433,19 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>-16216</Value>
+          <Value>-3569</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>-374</Value>
+          <Value>-5375</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-          <Value>20</Value>
+          <Value>1448</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-          <Value>0</Value>
+          <Value>-1799</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
@@ -825,8 +823,8 @@
                   <AttributeID>Internal Shipment Line Num</AttributeID>
                   <KeyColumns>
                     <KeyColumn>
-                      <NullProcessing>UnknownMember</NullProcessing>
                       <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
                       <Source xsi:type="ColumnBinding">
                         <TableID>Sales_ShippingContainer</TableID>
                         <ColumnID>InternalShipmentLineNum</ColumnID>
@@ -902,7 +900,7 @@
       <ConnectionString>Data Source=HOME-PC\LEARN2SQL2022;Initial Catalog=ProjectShop;Integrated Security=True;Encrypt=False</ConnectionString>
       <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
       <ImpersonationInfo>
-        <ImpersonationMode>ImpersonateCurrentUser</ImpersonationMode>
+        <ImpersonationMode>Default</ImpersonationMode>
         <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
       </ImpersonationInfo>
       <ManagedProvider>System.Data.SqlClient</ManagedProvider>
@@ -930,7 +928,6 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
-          <Value></Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
@@ -1050,7 +1047,7 @@
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-22743</DiagramViewPortLeft>
@@ -1069,7 +1066,7 @@
           <xs:element name="Project_x0020_Shop" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="97db0d32-c1bf-42cd-8ad3-3a93ab75602f">
             <xs:complexType>
               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="Sales_ShipmentHeader" msprop:design-time-name="6542ac65-dd19-4995-bcce-6800229ae801" msprop:FriendlyName="ShipmentHeader" msprop:TableType="Table" msprop:DbSchemaName="Sales" msprop:DbTableName="ShipmentHeader">
+                <xs:element name="Sales_ShipmentHeader" msprop:DbSchemaName="Sales" msprop:design-time-name="6542ac65-dd19-4995-bcce-6800229ae801" msprop:FriendlyName="ShipmentHeader" msprop:TableType="Table" msprop:DbTableName="ShipmentHeader">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="InternalShipmentNum" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="InternalShipmentNum" msprop:DbColumnName="InternalShipmentNum" msprop:design-time-name="ad9eca6e-f9db-453a-bb33-2a1bf371b288" type="xs:int" />
@@ -1080,7 +1077,7 @@
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Sales_ShipmentDetail" msprop:design-time-name="ce414fbc-84cc-4247-a506-6ff24bde2950" msprop:FriendlyName="ShipmentDetail" msprop:TableType="Table" msprop:DbSchemaName="Sales" msprop:DbTableName="ShipmentDetail">
+                <xs:element name="Sales_ShipmentDetail" msprop:DbSchemaName="Sales" msprop:design-time-name="ce414fbc-84cc-4247-a506-6ff24bde2950" msprop:FriendlyName="ShipmentDetail" msprop:TableType="Table" msprop:DbTableName="ShipmentDetail">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="InternalShipmentLineNum" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="InternalShipmentLineNum" msprop:DbColumnName="InternalShipmentLineNum" msprop:design-time-name="98be81dc-d0e0-495c-a587-54753e71950e" type="xs:int" />
@@ -1092,7 +1089,7 @@
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
-                <xs:element name="Sales_ShippingContainer" msprop:design-time-name="4f9d7f8c-d629-4302-bf5b-c8751749c593" msprop:FriendlyName="ShippingContainer" msprop:TableType="Table" msprop:DbSchemaName="Sales" msprop:DbTableName="ShippingContainer">
+                <xs:element name="Sales_ShippingContainer" msprop:DbSchemaName="Sales" msprop:design-time-name="4f9d7f8c-d629-4302-bf5b-c8751749c593" msprop:FriendlyName="ShippingContainer" msprop:TableType="Table" msprop:DbTableName="ShippingContainer">
                   <xs:complexType>
                     <xs:sequence>
                       <xs:element name="InternalContainerNum" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="InternalContainerNum" msprop:DbColumnName="InternalContainerNum" msprop:design-time-name="bb7acfa0-8bcb-417b-b6c2-4cd7c6872aec" type="xs:int" />

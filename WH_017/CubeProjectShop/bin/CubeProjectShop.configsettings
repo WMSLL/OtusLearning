@@ -6,7 +6,7 @@
         <ConnectionString>Data Source=HOME-PC\LEARN2SQL2022;Initial Catalog=ProjectShop;Integrated Security=True;Encrypt=False</ConnectionString>
         <ManagedProvider>System.Data.SqlClient</ManagedProvider>
         <ImpersonationInfo>
-          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateCurrentUser</ImpersonationMode>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
