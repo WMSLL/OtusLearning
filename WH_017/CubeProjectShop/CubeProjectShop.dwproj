@@ -31,6 +31,10 @@
       <Name>Shipping Container.dim</Name>
       <FullPath>Shipping Container.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Customers.dim</Name>
+      <FullPath>Customers.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
