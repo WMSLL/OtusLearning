@@ -5,7 +5,7 @@ ALTER DATABASE ProjectShop
 	TO FILEGROUP DateTimes
 go
 -- обычно при секционировании таблиц все индексы стараются выровнять по схеме (добавить поле по которому секционировали + разместить с привязкой к функции/схеме секционирования). сможете доработать?
-CREATE PARTITION FUNCTION [FN_partition](datetime) AS RANGE RIGHT FOR VALUES ('2020-01-01')
+CREATE PARTITION FUNCTION [FN_partition](datetime) AS RANGE RIGHT FOR VALUES ('2020-01-01','2021-01-01','2022-01-01')
 
 
 CREATE PARTITION SCHEME [S_partition] AS PARTITION [FN_partition]  ALL TO ([DateTimes])
