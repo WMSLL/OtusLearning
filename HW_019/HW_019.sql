@@ -4,11 +4,11 @@ ALTER DATABASE ProjectShop
 	ADD FILE (NAME = N'FileGroup', FILENAME = N'E:\Otus\Reposetory\OtusLearning\HW_019\DateTimes.ndf') 
 	TO FILEGROUP DateTimes
 go
+-- обычно при секционировании таблиц все индексы стараются выровнять по схеме (добавить поле по которому секционировали + разместить с привязкой к функции/схеме секционирования). сможете доработать?
+CREATE PARTITION FUNCTION [FN_partition](datetime) AS RANGE RIGHT FOR VALUES ('2020-01-01')
 
-CREATE PARTITION FUNCTION [FN_partition](datetime) AS RANGE LEFT FOR VALUES ('2020-01-01', '2020-01-02', '2020-01-03')
 
-
-CREATE PARTITION SCHEME [S_partition] AS PARTITION [FN_partition] TO ([DateTimes])
+CREATE PARTITION SCHEME [S_partition] AS PARTITION [FN_partition]  ALL TO ([DateTimes])
 
 
 ALTER TABLE [Sales].[ShipmentDetail] DROP CONSTRAINT [FK__ShipmentD__Inter__5165187F]
@@ -32,7 +32,7 @@ ALTER TABLE [Sales].[ShipmentHeader] ADD PRIMARY KEY NONCLUSTERED
 
 CREATE CLUSTERED INDEX [ClusteredIndex_on_S_partition_638633716818646737] ON [Sales].[ShipmentHeader]
 (
-	[DateTimeCreate]
+	[DateTimeCreate],[InternalShipmentNum]
 ) ON [S_partition]([DateTimeCreate])
 
 
