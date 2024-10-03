@@ -1,3 +1,5 @@
+Begin tran
+
 ALTER DATABASE ProjectShop ADD FILEGROUP DateTimes
 GO
 ALTER DATABASE ProjectShop 
@@ -21,18 +23,22 @@ ALTER TABLE [Sales].[ShippingContainer] DROP CONSTRAINT [FK__ShippingC__Inter__5
 
 
 
-ALTER TABLE [Sales].[ShipmentHeader] DROP CONSTRAINT [PK__Shipment__BC035B666D3EDF29] WITH ( ONLINE = OFF )
+ALTER TABLE [Sales].[ShipmentHeader] DROP CONSTRAINT PK__Shipment__BC035B6738AC2E59 WITH ( ONLINE = OFF )
 
 
-ALTER TABLE [Sales].[ShipmentHeader] ADD PRIMARY KEY NONCLUSTERED 
+ALTER TABLE [Sales].[ShipmentHeader] ADD PRIMARY KEY CLUSTERED 
 (
-	[InternalShipmentNum] ASC
+	[DateTimeCreate],[InternalShipmentNum] ASC
 ) ON [PRIMARY]
 
+ALTER TABLE [Sales].[ShipmentHeader] ADD PRIMARY KEY CLUSTERED 
+(
+	[DateTimeCreate],[InternalShipmentNum] ASC
+) ON  [S_partition]([DateTimeCreate])
 
 CREATE CLUSTERED INDEX [ClusteredIndex_on_S_partition_638633716818646737] ON [Sales].[ShipmentHeader]
 (
-	[DateTimeCreate],[InternalShipmentNum]
+	[DateTimeCreate],[InternalShipmentNum] 
 ) ON [S_partition]([DateTimeCreate])
 
 
@@ -55,3 +61,4 @@ REFERENCES [Sales].[ShipmentHeader] ([InternalShipmentNum])
 
 
 
+Rollback tran
